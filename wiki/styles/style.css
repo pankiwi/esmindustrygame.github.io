@@ -150,7 +150,7 @@
   padding: 12px 12px;
 }
 #config-icon:hover{
-  background-color: var(--blue-hover);
+  background-color: var(--main-hover);
 }
 
 
