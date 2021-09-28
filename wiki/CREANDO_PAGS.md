@@ -39,7 +39,7 @@ Bien, una vez dentro deberia verse tal que así, (VsCode, se verá similar en ot
 Dentro de el lo primero que deberemos hacer será definir el cuerpo básico de la página, en el que nuestra plantilla que cargaremos después creará la página.
 Deberás escribir algo como esto:
 ```html
-<html lang='es'>
+<html lang='es' prefix='og:'>
   <meta charset='UTF-8'>
   <div id='main'></div>
   <div id='content'> </div>
@@ -67,7 +67,7 @@ Bien, una vez definido la cantidad de subdirectorios que tenemos lo siguiente a 
 
 Un ejemplo de como ha quedado la base de la página Cobre:
 ```html
-<html lang='es'>
+<html lang='es' prefix='og:'>
   <meta charset='UTF-8'>
   <div id='main'></div>
   <div id='content'> </div>
