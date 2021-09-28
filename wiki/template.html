@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Mindustry Wiki Español</title>
+    <link rel='stylesheet' href='styles/style.css'>
+  </head>
+  <body>
+    <div id='header'>
+      <header>
+        <ul id='header-ul-left'>
+          <li class='header-element' ><a id='header-favicon'title='Mindustry Wiki Español' href=''><img src='${dirString}content/images/favicon.png' width='36' height='36' id='header-favicon'></a></li>
+          <li class='header-element' ><a id='header-title' title='Página Principal' href=''>Mindustry Wiki Español</a></li>
+        </ul>
+        <ul id='header-ul-right'>
+          <li class='header-element' ><a class='header-button' title='Guias para usuarios nuevos en algun tópico del juego' href='' target='_blank'>Guias</a></li>
+          <li class='header-element' ><a class='header-button' title='Se parte de nuestra comunidad de Discord' href='https://discord.gg/dgXjVpxWnn' target='_blank'>Discord</a></li>
+          <li class='header-element' ><div id='header-search'><input id='header-search-input' type='text' placeholder='Buscar'></div></li>
+          <li class='header-element' ><img id='config-icon'src='${dirString}content/images/config.png'></li>
+        </ul>
+      </header>
+    </div>
+
+    <div id='sidemenu'>
+
+    </div>
+
+    <div id='content'>
+      ${__cnt.innerHTML}
+    </div>
+
+    <div id='overlay'>
+      <div id='config'>
+        <ul>
+          <li class='header-element config-title-li'><a class='config-title'>Iluminación</a></li>
+          <li class='header-element'><input id='ilumination'type='range' min='0' max='256'></li>
+          <li class='header-element config-title-li'><a class='config-title'>Color</a></li>
+          <li class='header-element'>
+            <ul>
+              <li class='header-element color-li'><input class='color-button' id='color-red' type='button'></li>
+              <li class='header-element color-li'><input class='color-button' id='color-orange' type='button'></li>
+              <li class='header-element color-li'><input class='color-button' id='color-green' type='button'></li>
+              <li class='header-element color-li'><input class='color-button' id='color-blue' type='button'></li>
+              <li class='header-element color-li'><input class='color-button' id='color-purple' type='button'></li>
+              <li class='header-element color-li'><input class='color-button' id='color-black' type='button'></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>

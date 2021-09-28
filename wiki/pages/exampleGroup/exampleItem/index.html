@@ -1,0 +1,14 @@
+<html lang='es'>
+  <meta charset='UTF-8'>
+  <div id='main'></div>
+  <div id='content'> </div>
+</html>
+<script>var subDirs = 3;</script>
+<script src="../../../preload.js"></script>
+<script>
+  overwriteContent(`
+  <p>Example Text</p>
+  ${plantillas.image({img:'favicon.png',width:60,height:60})}
+  `)
+</script>
+<script src="../../../afterload.js"></script>
