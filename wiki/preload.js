@@ -10,8 +10,6 @@ ___.content = document.getElementById('content');
 (document.getElementById('main')).innerHTML = `
 <head>
   <meta charset='UTF-8'>
-  <html prefix="og: ${document.URL}">
-  <meta property="og:title" content="Example Title"/>
   <title>Mindustry Wiki Español</title>
   <link rel='stylesheet' href='styles/style.css'>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono">
