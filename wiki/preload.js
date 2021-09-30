@@ -1,11 +1,11 @@
-var ___ = {}
 //Chekea subDirs
 if(!subDirs){var subDirs = 0;}else if(subDirs < 0 && typeof subDirs !== 'number'){subDirs = 0;}
 else if(subDirs > 3){subDirs = 3;}
 var dirString = '';
 for(let i = 0; i<subDirs; i++){dirString = dirString + '../';}
 
-//Importar preload
+const discordInvite ='https://discord.gg/dgXjVpxWnn';
+var ___ = {}
 ___.content = document.getElementById('content');
 (document.getElementById('main')).innerHTML = `
 <head>
@@ -24,19 +24,20 @@ ___.content = document.getElementById('content');
     </ul>
     <ul id='header-ul-right'>
       <li class='header-element' ><a class='header-button' title='Guias para usuarios nuevos en algun tópico del juego' href='' target='_blank'>Guias</a></li>
-      <li class='header-element' ><a class='header-button' title='Se parte de nuestra comunidad de Discord' href='https://discord.gg/dgXjVpxWnn' target='_blank'>Discord</a></li>
+      <li class='header-element' ><a class='header-button' title='Se parte de nuestra comunidad de Discord' href='${discordInvite}' target='_blank'>Discord</a></li>
       <li class='header-element' ><div id='header-search'><input id='header-search-input' type='text' placeholder='Buscar'></div></li>
       <li class='header-element' ><img id='config-icon'src='${dirString}content/images/config.png'></li>
     </ul>
   </header>
 </div>
+<div id='header-margin'></div>
 
-<div id='sidemenu'>
-
-</div>
-
-<div id='content'>
-  ${___.content.innerHTML}
+<div id='container'>
+  <div id='sidemenu'>
+  </div>
+  <div id='content'>
+    ${___.content.innerHTML}
+  </div>
 </div>
 
 <div id='overlay'>
@@ -58,12 +59,9 @@ ___.content = document.getElementById('content');
     </ul>
   </div>
 </div>
-
 </body>
 `;
 ___.content.remove();
-
-___.newSearchElement = () => {};
 
 // Aparecer y desaparecer ventana de configuracion
 ___.config = document.getElementById('config');
@@ -108,7 +106,6 @@ ___.ilumination.addEventListener('change', () => {
 
 
 
-//Variables de la pag
 /**Referencia al div content */
 const content = document.getElementById('content');
 
@@ -150,24 +147,32 @@ const span = (data) => {
  * - data.class: (String) Clases
  * - data.style: (String) Estilo (.css)
  * - data.href: (String) Enlace para redirección
+ * - data.styledText = (Boolean) Si el texto tendrá aspecto de Link
+ * - data.newTab (Boolean) Abrir el link en una nueva pestaña
  * @returns {String} <a>
 */
 const a = (data) => {
-  if(!data){console.error('Datos del a no definidos');}
+  if(!data){return console.error('Datos del a no definidos');}
   else if(typeof data === 'string'){
-    return `<a href='${data}'>${data}</a>`
+    return `<a style='color: var(--main);' href='#'>${data}</a>`
   }else if(typeof data === 'object'){
     if(!data.content){data.content = '';}
     if(typeof data.content !== 'string'){console.error('data.content debe ser tipo "string"');}
     if(!data.href){data.href = '';}
     if(typeof data.href !== 'string'){console.error('data.href debe ser tipo "string"');}
+    if(typeof data.styledText !== 'boolean' && typeof data.styledText !== 'undefined'){console.error('data.styledText debe ser tipo "Boolean"')}
+    if(data.styledText === false || typeof data.styledText === 'undefined'){data.styledText = 'color: var(--main);';}
+    else{data.styledText = 'text-decoration: none;'}
     if(!data.class){data.class = '';}
     if(typeof data.class !== 'string'){console.error('data.class debe ser tipo "string"');}
     if(!data.id){data.id = '';}
     if(typeof data.id !== 'string'){console.error('data.id debe ser tipo "string"');}
     if(!data.style){data.style = '';}
+    if(typeof data.newTab !== 'boolean'&& typeof data.newTab !== 'undefined'){console.error('data.newTab debe ser tipo "Boolean"')}
+    if(!data.newTab){data.newTab = '';}
+    else{data.newTab = 'target="blank"'}
     if(typeof data.style !== 'string'){console.error('data.style debe ser tipo "string"');}
-    return `<a id='${data.id}' class='${data.class}' style='${data.style}' href='${data.href}'>${data.content}</a>`
+    return `<a id='${data.id}' class='${data.class}' style='${data.styledText}${data.style}' href='${data.href}' ${data.newTab}>${data.content}</a>`
   } 
 }
 /**Crea un texto en italic/cursiva<p>
@@ -227,9 +232,10 @@ const b = (data) => {
  * - data.id: (String) Id
  * - data.style: (String) Estilo (.css)
  * - data.url: (Boolean) Si la imagen es una url de internet
+ * - data.center: (Boolean) Si la imagen debe estar centrada
  * @returns {String} <img>
 */
-const image = (data) => {
+const img = (data) => {
   if(!data){console.error('Datos de la imagen no definidos');}
   else if(typeof data === 'string'){
     return `<img src='${dirString}content/images/${data}'></img>`
@@ -246,10 +252,17 @@ const image = (data) => {
     if(typeof data.id !== 'string'){console.error('data.id debe ser tipo "string"');}
     if(!data.style){data.style = '';}
     if(typeof data.style !== 'string'){console.error('data.style debe ser tipo "string"');}
-    if(typeof data.url !== 'boolean'){console.error('data.url debe ser tipo "Boolean"')}
+    if(typeof data.center !== 'boolean'&& typeof data.center !== 'undefined'){console.error('data.center debe ser tipo "Boolean"')}
+    if(!data.center){data.center = '';}
+    else{data.center = 'display:block;margin:10px auto;';}
+    if(typeof data.url !== 'boolean'&& typeof data.url !== 'undefined'){console.error('data.url debe ser tipo "Boolean"')}
     if(!data.url){
-      return `<img id='${data.id}' class='${data.class}' style='${data.style}' src='${dirString}content/images/${data.img}' width='${data.width}' height='${data.height}'>`
-    }else{return `<img id='${data.id}' class='${data.class}' style='${data.style}' src='${data.img}' width='${data.width}' height='${data.height}'>`}
+      return `<img id='${data.id}' class='${data.class}' style='${data.center}${data.style}' src='${dirString}content/images/${data.img}' width='${data.width}' height='${data.height}'>`
+    }else{return `<img id='${data.id}' class='${data.class}' style='${data.center}${data.style}' src='${data.img}' width='${data.width}' height='${data.height}'>`}
   }else{console.error('data debe ser tipo "string" o "object"{}');}
   
+}
+/**Crea un salto de linea*/
+const br = () => {
+  return '<br>'
 }
