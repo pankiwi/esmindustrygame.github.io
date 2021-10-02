@@ -1,18 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback');
 /*audiowideregular*/
 :root{
   --main-light-light: var(--orange-light-light);
   --main-light: var(--orange-light);
   --main:var(--orange);
   --main-hover:var(--orange-hover);
-  --background:var(--dark-gray);
+  --background-light-light:var(--background-dark-light-light);
+  --background-light:var(--background-dark-light);
+  --background:var(--background-dark);
+  --background-hover:var(--background-dark-hover);
   --font-color: #fff;
   --shadow-color: #505050;
 
+  --background-dark-light-light: #999999;
+  --background-dark-light: #303030;
+  --background-dark: #1d1d1d;
+  --background-dark-hover: #101010;
 
-  --dark-gray: #1d1d1d;
+  --background-white-light-light: #494949;
+  --background-white-light: #c4c4c4;
+  --background-white: #ececec;
+  --background-white-hover: #ffffff;
 
   --red-light-light: #eb9393;
   --red-light: #f16a6a;
@@ -246,22 +257,110 @@
 #container{
   margin: 3% 4%;
   display: inline-flex;
+  width: 92%;
 }
 
 #content{
   float: left;
-}
-#content span{
-  font-family: 'Audiowide';
-}
-#content i{
-  font-family: 'Audiowide';
-}
-#content b{
-  font-family: 'Audiowide';
-}
-#content a{
-  font-family: 'Audiowide';
+  width: 100%;
 }
 
 /* PLANTILLAS */
+
+.imgCenter{
+  display: block;
+  margin:10px auto;
+}
+.aLink{
+  color: var(--main);
+}.aLink:hover{
+  color: var(--main-light);
+}
+.noDecoration{
+  text-decoration: none;
+}
+
+.codeText{
+  color: var(--background-light-light);
+  background-color: var(--background-light);
+  font-family: "Roboto Mono";
+  font-size: 14;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.codeTextBigger{
+  color: var(--background-light-light);
+  background-color: var(--background-light);
+  font-family: "Roboto Mono";
+  font-size: 13;
+  padding: 8px 10px;
+  border-radius: 3px;
+  margin: 10px 0px;
+  display: block;
+  padding-right: auto;
+}
+
+.table-div{
+  border-radius: 5px;
+  border-color: var(--background-light);
+  border-style: solid;
+  border-width: 2px;
+  float: left;
+}
+
+.table-div table tr th{
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 20px;
+}
+.table-div table tr td{
+  text-align: left;
+  padding: 10px 20px;
+  border-color: rgba(0, 0, 0, 0);
+  border-top: var(--background-light);
+  border-style: solid;
+  border-width: 2px;
+  white-space: pre-wrap;
+}
+
+.table-div table tr:hover td{
+  background: var(--background-light);
+}
+
+.color-square{
+  margin-left: 10px;
+  float: right;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.h3, .h4, .h5, .h6{
+  padding-bottom: 0.1em;
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom: var(--background-light);
+  border-style: solid;
+  border-width: 2px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.h6{
+  font-size: 40px;
+}
+.h5{
+  font-size: 35px;
+}
+.h4{
+  font-size: 30px;
+}
+.h3{
+  font-size: 25px;
+}
+.h2{
+  font-size: 20px;
+}
+.h1{
+  font-size: 15px;
+}
