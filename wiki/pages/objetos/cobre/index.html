@@ -6,78 +6,38 @@
   <meta property='og:description' content='Un práctico material para la construcción. Usado en todo tipo de bloques y munición.'/>
   <meta property='og:image' content='https://esmindustrygame.github.io/wiki/content/images/objetos/cobre.png'/>
   <div id='main'></div>
-  <div id='content'></div>
+  <div id='content'>
+    <h1><img src='../../../content/images/objetos/cobre.png' height="48px" width="48px"> Cobre</h1>
+    <i>Un práctico material para la construcción. Usado en todo tipo de bloques y munición.</i>
+    <br><br>
+    <table style='float:right;'>
+      <tr><th>Propiedad</th><th>Valor</th></tr>
+      <tr><td>Explosividad</td><td>0%</td></tr>
+      <tr><td>Inflamabilidad</td><td>0%</td></tr>
+      <tr><td>Radioactividad</td><td>0%</td></tr>
+      <tr><td>Carga eléctrica</td><td>0%</td></tr>
+      <tr><td>Nombre interno</td><td><code>copper</code></td></tr>
+      <tr><td>Color</td><td><code>d99d73</code><div class='colorSquare' style='background-color:#d99d73;'></div></td></tr>
+      <tr><td>Dureza</td><td>1</td></tr>
+    </table>
+    <br>
+    <h4>Producido en</h4>
+    <a href='../../bloques/taladroMecanico'><img src='../../../content/images/bloques/taladros/taladroMecanico.png' height="24px" width="24px"></a>
+    <a href='../../bloques/taladroNeumatico'><img src='../../../content/images/bloques/taladros/taladroNeumatico.png' height="24px" width="24px"></a>
+    <a href='../../bloques/taladroLaser'><img src='../../../content/images/bloques/taladros/taladroLaser.png' height="24px" width="24px"></a>
+    <a href='../../bloques/taladroDeExplosion'><img src='../../../content/images/bloques/taladros/taladroDeExplosion.png' height="24px" width="24px"></a>
+    <br><br>
+    
+    <h4>Requerido por</h4>
+    <a href='../../bloques/fundidorDeMateria'><img src='../../../content/images/bloques/produccion/fundidorDeMateria.png' height="24px" width="24px"></a>
+    <a href='../../bloques/duo'><img src='../../../content/images/bloques/torretas/duo.png' height="24px" width="24px"></a>
+    <a href='../../bloques/salvo'><img src='../../../content/images/bloques/torretas/salvo.png' height="24px" width="24px"></a>
+    <a href='../../bloques/aceleradorInterplanetario'><img src='../../../content/images/bloques/carga/aceleradorInterplanetario.png' height="24px" width="24px"></a>
+    <br><br>
+    
+    <h4>Usado para construir</h4>
+  </div>
 </html>
 <script>var subDirs = 3;</script>
 <script src="../../../preload.js"></script>
-<script>
-//↓
-  writeContent(`
-  ${span({
-    content: img({img:'objetos/cobre.png',height:'48px',width:'48px'})+' Cobre',
-    class:'h6',
-  })}
-
-  ${span({content:i('Un práctico material para la construcción. Usado en todo tipo de bloques y munición')})}
-  ${tableObjetos({float:'right',content:{
-    explosividad:'0',
-    inflamabilidad:'0',
-    radioactividad:'0',
-    cargaElectrica:'0',
-    nombreInterno:'copper',
-    color:'d99d73',
-    dureza:'1'
-  }})}
-
-  ${br()}${br()}
-  ${span({
-    content:'Producido en',
-    class:'h3'
-  })}
-  ${a({content:img({img:'bloques/taladros/taladroMecanico.png',height:'24px',width:'24px'}),href:'../../bloques/taladroMecanico/'})}
-  ${a({content:img({img:'bloques/taladros/taladroNeumatico.png',height:'24px',width:'24px'}),href:'../../bloques/taladroNeumatico/'})}
-  ${a({content:img({img:'bloques/taladros/taladroLaser.png',height:'24px',width:'24px'}),href:'../../bloques/taladroLaser/'})}
-  ${a({content:img({img:'bloques/taladros/taladroDeExplosion.png',height:'24px',width:'24px'}),href:'../../bloques/taladroDeExplosion/'})}
-
-  ${br()}${br()}
-  ${span({
-    content:'Requerido por',
-    class:'h3'
-  })}
-  ${a({content:img({img:'bloques/produccion/fundidorDeMateria.png',height:'24px',width:'24px'}),href:'../../bloques/fundidorDeMateria/'})}
-  ${a({content:img({img:'bloques/torretas/duo.png',height:'24px',width:'24px'}),href:'../../bloques/duo/'})}
-  ${a({content:img({img:'bloques/torretas/salvo.png',height:'24px',width:'24px'}),href:'../../bloques/salvo/'})}
-  ${a({content:img({img:'bloques/carga/aceleradorInterplanetario.png',height:'24px',width:'24px'}),href:'../../bloques/aceleradorInterplanetario/'})}
-
-  ${br()}${br()}
-  ${span({
-    content:'Usado para construir',
-    class:'h3'
-  })}
-  ${a({content:img({img:'bloques/produccion/prensaDeGrafito.png',height:'24px',width:'24px'}),href:'../../bloques/prensaDeGrafito/'})}
-  ${a({content:img({img:'bloques/produccion/hornoParaSilicio.png',height:'24px',width:'24px'}),href:'../../bloques/hornoParaSilicio/'})}
-  ${a({content:img({img:'bloques/produccion/hornoParaCristal.png',height:'24px',width:'24px'}),href:'../../bloques/hornoParaCristal/'})}
-  ${a({content:img({img:'bloques/produccion/mezcladorDePirotita.png',height:'24px',width:'24px'}),href:'../../bloques/mezcladorDePirotita/'})}
-  ${a({content:img({img:'bloques/produccion/fundidor.png',height:'24px',width:'24px'}),href:'../../bloques/fundidor/'})}
-  ${a({content:img({img:'bloques/produccion/separador.png',height:'24px',width:'24px'}),href:'../../bloques/separador/'})}
-  ${a({content:img({img:'bloques/produccion/pulverizador.png',height:'24px',width:'24px'}),href:'../../bloques/pulverizador/'})}
-  ${a({content:img({img:'bloques/muros/muroDeCobre.png',height:'24px',width:'24px'}),href:'../../bloques/muroDeCobre/'})}
-  ${a({content:img({img:'bloques/muros/muroDeCobreGrande.png',height:'24px',width:'24px'}),href:'../../bloques/muroDeCobreGrande/'})}
-  ${a({content:img({img:'bloques/defensa/reparador.png',height:'24px',width:'24px'}),href:'../../bloques/reparador/'})}
-  ${a({content:img({img:'bloques/distribucion/cintaTransportadora.png',height:'24px',width:'24px'}),href:'../../bloques/cintaTransportadora/'})}
-  ${a({content:img({img:'bloques/distribucion/cintaTransportadoraDeTitanio.png',height:'24px',width:'24px'}),href:'../../bloques/cintaTransportadoraDeTitanio/'})}
-  ${a({content:img({img:'bloques/distribucion/cruce.png',height:'24px',width:'24px'}),href:'../../bloques/cruce/'})}
-  ${a({content:img({img:'bloques/distribucion/puenteDeCintaTransportadora.png',height:'24px',width:'24px'}),href:'../../bloques/puenteDeCintaTransportadora/'})}
-  ${a({content:img({img:'bloques/distribucion/clasificador.png',height:'24px',width:'24px'}),href:'../../bloques/clasificador/'})}
-  ${a({content:img({img:'bloques/distribucion/clasificadorInvertido.png',height:'24px',width:'24px'}),href:'../../bloques/clasificadorInvertido/'})}
-  ${a({content:img({img:'bloques/distribucion/enrutador.png',height:'24px',width:'24px'}),href:'../../bloques/enrutador/'})}
-  ${a({content:img({img:'bloques/distribucion/distribuidor.png',height:'24px',width:'24px'}),href:'../../bloques/distribuidor/'})}
-  ${a({content:img({img:'bloques/distribucion/compuertaDeDesborde.png',height:'24px',width:'24px'}),href:'../../bloques/compuertaDeDesborde/'})}
-  ${a({content:img({img:'bloques/distribucion/compuertaDeSubdesbordamiento.png',height:'24px',width:'24px'}),href:'../../bloques/compuertaDeSubdesbordamiento/'})}
-  ${a({content:img({img:'bloques/liquidos/bombaMecanica.png',height:'24px',width:'24px'}),href:'../../bloques/bombaMecanica/'})}
-  ${a({content:img({img:'bloques/liquidos/bombaRotatoria.png',height:'24px',width:'24px'}),href:'../../bloques/BombaRotatoria/'})}
-  ${a({content:img({img:'bloques/liquidos/bombaTermica.png',height:'24px',width:'24px'}),href:'../../bloques/BombaTermica/'})}
-  `)/*Faltan bastantes de 'Usado para construir'*/
-//↑
-</script>
 <script src="../../../afterload.js"></script>
