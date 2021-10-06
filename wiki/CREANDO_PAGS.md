@@ -1,3 +1,5 @@
+# Este archivo esta obsoleto.
+
 Cualquier duda escrbirme a mí RexHm `612122239428722720`
 
 # Crear & Editar Paginas del Wiki
