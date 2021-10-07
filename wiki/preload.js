@@ -2,9 +2,11 @@
 if(!subDirs){var subDirs = 0;}else if(subDirs < 0 && typeof subDirs !== 'number'){subDirs = 0;}
 let dirString = '';
 for(let i = 0; i<subDirs; i++){dirString = dirString + '../';}
+
 (() => {
 const discordInvite = 'https://discord.gg/dgXjVpxWnn'
 
+//Configure Themes
 let themeMode = localStorage.getItem('themeMode');
 if(themeMode === 'true'){
   //light
@@ -36,12 +38,14 @@ if(colorMode){
   document.documentElement.style.setProperty('--main-hover', `var(--orange-hover)`);
 }
 
+//Replace HTML content
 const content = document.getElementById('content');
 (document.getElementById('main')).innerHTML = `
 <head>
   <meta charset='UTF-8'>
   <title>Mindustry Wiki Español</title>
   <link rel='stylesheet' href='${dirString}styles/style.css'>
+  <link rel='stylesheet' href='${dirString}styles/highlight.css'>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -99,6 +103,7 @@ const content = document.getElementById('content');
 `;
 content.remove();
 
+//Configure the page config
 const config = document.getElementById('config');
 let configIsActive = false;
 (document.getElementById('config-icon')).addEventListener('click', () => {
@@ -110,7 +115,6 @@ let configIsActive = false;
     configIsActive = true;
   }
 });
-
 (document.getElementById('theme-dark')).addEventListener('click', () => {
   localStorage.setItem('themeMode', 'false');
   document.documentElement.style.setProperty('--font-color','#fff');
@@ -129,7 +133,6 @@ let configIsActive = false;
   document.documentElement.style.setProperty('--background', `var(--white)`);
   document.documentElement.style.setProperty('--background-hover', `var(--white-hover)`);
 });
-
 for(button of (document.getElementsByClassName('color-button'))){
   let colorName = button.id.slice(6, button.id.length);
   button.addEventListener('click', () => {

@@ -1,0 +1,33 @@
+:root{
+  --string: #ce9178;
+  --int: #72a79f;
+  --boolean: #2559b3;
+  --function: #dcdcaa;
+  --class: #4cc9b0;
+  --keyword: #2559b3;
+  --keyword2: #a586c0;
+
+  --comment: #599955;
+  --constant: #2b8ef7;
+  --variable: #9cdcfe;
+
+  --mark: #d16969;
+}
+.blank,.highlight-mark,.highlight-string,.highlight-int,.highlight-boolean,.highlight-function,.highlight-class,.highlight-keyword,.highlight-keyword2,.highlight-comment,.highlight-constant,.highlight-variable{
+  background-color: rgba(0,0,0,0);
+}
+
+.highlight-string{color: var(--string);}
+.highlight-int{color: var(--int);}
+.highlight-boolean{color: var(--boolean);}
+.highlight-function{color: var(--function);}
+.highlight-class{color: var(--class);}
+.highlight-keyword{color: var(--keyword);}
+.highlight-keyword2{color: var(--keyword2);}
+
+.highlight-comment{color: var(--comment);}
+.highlight-constant{color: var(--constant);}
+.highlight-variable{color: var(--variable);}
+
+.highlight-mark{color: var(--mark);}
+.highlight-blank{color: #fff;}

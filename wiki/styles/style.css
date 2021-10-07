@@ -298,6 +298,8 @@ code{
   padding-right: auto;
 }
 
+code,.codeBig *{font-family: "Roboto Mono";}
+
 /* table tr th */
 table{
   border-radius: 5px;
