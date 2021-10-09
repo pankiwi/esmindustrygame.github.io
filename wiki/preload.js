@@ -31,11 +31,6 @@ if(colorMode){
   document.documentElement.style.setProperty('--main-light', `var(--${colorMode}-light)`);
   document.documentElement.style.setProperty('--main', `var(--${colorMode})`);
   document.documentElement.style.setProperty('--main-hover', `var(--${colorMode}-hover)`);
-}else{
-  document.documentElement.style.setProperty('--main-light-light', `var(--orange-light-light)`);
-  document.documentElement.style.setProperty('--main-light', `var(--orange-light)`);
-  document.documentElement.style.setProperty('--main', `var(--orange)`);
-  document.documentElement.style.setProperty('--main-hover', `var(--orange-hover)`);
 }
 
 //Replace HTML content
