@@ -75,7 +75,7 @@ const content = document.getElementById('content');
     </ul>
     <span id='sidemenu-category-logica'>Logica<span id='sidemenu-category-logica-icon' class='fas fa-angle-right'></span></span><br>
     <ul id='sidemenu-category-logica-ul'>
-      <li></li>
+      <li><a href='https://esmindustrygame.github.io/wiki/pages/logica/introduccion/'>Introducción</a></li>
     </ul>
   </div>
   <div id='content'>
