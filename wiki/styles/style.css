@@ -136,6 +136,7 @@
   display: inline-flex;
   cursor: pointer;
   text-decoration: none;
+  transition: all ease 100ms;
 }
 .header-button:hover{
   background-color: var(--main-hover);
@@ -166,6 +167,7 @@
   height: 24px;
   width: 24px;
   padding: 12px 12px;
+  transition: all ease 100ms;
 }
 #config-icon:hover{
   background-color: var(--main-hover);
