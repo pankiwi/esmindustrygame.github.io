@@ -68,6 +68,14 @@ const content = document.getElementById('content');
 
 <div id='container'>
   <div id='sidemenu'>
+    <span id='sidemenu-category-objetos'>Objetos<span id='sidemenu-category-objetos-icon'class='far fa-angle-right'></span></span><br>
+    <ul id='sidemenu-category-objetos-ul'>
+      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/cobre/'><img src='${dirString}content/images/objetos/cobre.png'>Cobre</a></li>
+    </ul>
+    <span id='sidemenu-category-logica'>Logica<span id='sidemenu-category-logica-icon' class='far fa-angle-right'></span></span><br>
+    <ul id='sidemenu-category-logica-ul'>
+      <li></li>
+    </ul>
   </div>
   <div id='content'>
     ${content.innerHTML}
@@ -143,4 +151,36 @@ for(button of (document.getElementsByClassName('color-button'))){
     document.documentElement.style.setProperty('--main-hover', `var(--${colorName}-hover)`);
   })  
 }
+
+//sidemenu
+//objetos
+let objetosCategory = document.getElementById('sidemenu-category-objetos');
+let objetosCategoryIcon = document.getElementById('sidemenu-category-objetos-icon')
+let objetosCategoryUl = document.getElementById('sidemenu-category-objetos-ul');
+console.log(objetosCategoryIcon)
+objetosCategory.addEventListener('click', () => {
+  if(objetosCategoryUl.style.display == 'block'){
+    objetosCategoryUl.style.setProperty('display','none');
+    objetosCategoryIcon.setAttribute('class','far fa-angle-right');
+  }
+  else{objetosCategoryUl.style.setProperty('display','block')
+  objetosCategoryIcon.setAttribute('class','far fa-angle-right sidemenu-icon-rotated');
+  }
+})
+
+//logica
+let logicaCategory = document.getElementById('sidemenu-category-logica');
+let logicaCategoryIcon = document.getElementById('sidemenu-category-logica-icon')
+let logicaCategoryUl = document.getElementById('sidemenu-category-logica-ul');
+console.log(logicaCategoryIcon)
+logicaCategory.addEventListener('click', () => {
+  if(logicaCategoryUl.style.display == 'block'){
+    logicaCategoryUl.style.setProperty('display','none');
+    logicaCategoryIcon.setAttribute('class','far fa-angle-right');
+  }
+  else{logicaCategoryUl.style.setProperty('display','block')
+  logicaCategoryIcon.setAttribute('class','far fa-angle-right sidemenu-icon-rotated');
+  }
+})
+
 })();
