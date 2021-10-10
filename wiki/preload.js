@@ -71,6 +71,7 @@ const content = document.getElementById('content');
     <span id='sidemenu-category-logica'>Logica<span id='sidemenu-category-logica-icon' class='fas fa-angle-right'></span></span><br>
     <ul id='sidemenu-category-logica-ul'>
       <li><a href='https://esmindustrygame.github.io/wiki/pages/logica/introduccion/'>Introducción</a></li>
+      <li><a href='https://esmindustrygame.github.io/wiki/pages/logica/glosario/'>Glosario</a></li>
     </ul>
   </div>
   <div id='content'>
@@ -153,7 +154,6 @@ for(button of (document.getElementsByClassName('color-button'))){
 let objetosCategory = document.getElementById('sidemenu-category-objetos');
 let objetosCategoryIcon = document.getElementById('sidemenu-category-objetos-icon')
 let objetosCategoryUl = document.getElementById('sidemenu-category-objetos-ul');
-console.log(objetosCategoryIcon)
 objetosCategory.addEventListener('click', () => {
   if(objetosCategoryUl.style.display == 'block'){
     objetosCategoryUl.style.setProperty('display','none');
@@ -168,7 +168,6 @@ objetosCategory.addEventListener('click', () => {
 let logicaCategory = document.getElementById('sidemenu-category-logica');
 let logicaCategoryIcon = document.getElementById('sidemenu-category-logica-icon')
 let logicaCategoryUl = document.getElementById('sidemenu-category-logica-ul');
-console.log(logicaCategoryIcon)
 logicaCategory.addEventListener('click', () => {
   if(logicaCategoryUl.style.display == 'block'){
     logicaCategoryUl.style.setProperty('display','none');

@@ -1,0 +1,150 @@
+<html lang='es' prefix='og:'>
+  <script src="https://kit.fontawesome.com/f1c716e207.js" crossorigin="anonymous"></script>
+  <meta charset='UTF-8'>
+  <meta name='theme-color' content='#bf92f8'>
+  <meta property='og:title' content='Lógica - Glosario'/>
+  <meta property='og:url' content='https://esmindustrygame.github.io/wiki/'/>
+  <meta property='og:description' content='La enciclopedia en español dedicada a recopilar información sobre Mindustry, el videojuego de estrategia, manejo de recursos, tower defense, y sandbox, creado por Anuken.'/>
+  <meta property='og:image' content='https://esmindustrygame.github.io/wiki/content/images/orangeContainer.png'/>
+  <div id='main'></div>
+  <div id='content'>
+    <h1>Glosario</h1>
+    <span>
+      Este glosario proporciona explicaciones más detalladas
+      sobre muchos términos utilizados en este manual.
+      El lenguaje utilizado para expresar la mayoria de los términos
+      será ingles debido a que es un estandar a seguir.
+    </span>
+    <br><br>
+    <h2>Tipos de datos</h2>
+    <span>Hay dos tipos de datos principales en Mindustry; number y objects</span>
+    <br><br>
+    <i>
+      No confundir "object" con "objeto", un "objeto" es una referencia
+      a un recurso del juego, como el cobre o plomo.
+    </i>
+    <br><br>
+    <h5>Number</h5>
+    <span>
+      Un número decimal. Puede ser negativo o positivo,
+      y puede representar valores true (cualquier cosa que no sea igual a 0)
+      o falsos (0). Null tambíen se representa como 0.
+      <br><br>
+      Algunas instrucciones solo pueden aceptar números enteros,
+      por lo que se indica en consecuencia en este manual.
+      <br><br>
+      Internamente, los números se almacenan como valores <code>float</code> de 64 bits (<code>double</code>)
+      y se operan como integers de 64 bits con signo (<code>long</code>)
+      cuando se trata de un desplazamiento de bits.
+    </span>
+    <br><br>
+    <h5>String</h5>
+    <span>
+      Un object que representa texto entre comillas,
+      por ejemplo: <code>"Hello Mindustry"</code>.
+    </span>
+    <br><br>
+    <h5>Building</h5>
+    <span>
+      Un object que representa una construcción física en un sector/mapa
+      <br><br>
+      <b>Esto es diferente de un bloque</b>; un bloque es simplemente un tipo de building
+      pero un building es un bloque tangible, ya que tiene salud, interactúa con la energía
+      y los objetos del juego.
+      <br><br>
+      Esencialmente, <b>un Building es un bloque que existe físicamente en un sector/mapa</b>.
+      <br><br>
+      Por ejemplo, la instrucción <code>getlink</code> retornará un Building object
+      del que puedes obtener información sobre el mismo utilizando la instrucción <code>sensor</code>.
+    </span>
+    <br><br>
+    <h5>Unit</h5>
+    <span>
+      Objeto que representa una unidad en un sector/mapa, incluido el jugador.
+      <br><br>
+      Por ejemplo, la instrucción <code>ubind</code> establecerá una variable del procesador
+      <code>@unit</code> a un Unit object representando una unidad.
+    </span>
+    <br><br>
+    <h2>Tipos de parámetros</h2>
+    <span>
+      Estos son como los tipos de datos, pero solo funcionan como parámetros para
+      las instrucciones y no son devueltos por ninguna instrucción.
+    </span>
+    <br><br>
+    <h5>BuildingType <code>content</code></h5>
+    <span>
+      Un tipo de Building, comienza con <code>@</code>.
+      <br><br>
+      Dentro del código del juego, esto se conoce mejor como 'Block'.
+      Sin embargo, en aras de la legibilidad en este manual, lo llamaremos
+      BuildingType.
+      <br><br>
+      A diferencia de los objetos y líquidos, no puede usar esto en el <code>sensor</code>.
+      Sin embargo, puede usar <code>@type</code> en el <code>sensor</code> y compararlo con <code>jump</code>.
+      <br><br>
+      Ejemplo: <code>@scatter</code>
+    </span>
+    <br><br>
+    <h5>UnitType <code>content</code></h5>
+    <span>
+      Un tipo de unidad. Comienza con <code>@</code>.
+      <br><br>
+      Ejemplo: <code>@toxopid</code>
+      <br><br>
+      <i>Se muestra una lista completa debajo del botón de lápiz en el bloque de instrucciones "Unit Bind".</i>
+      <br><br>
+      <img src='../../../content/images/logica-glosario-unitType-unitBind.png'>
+    </span>
+    <br><br>
+    <h5>Senseable</h5>
+    <span>
+      Un objeto, líquido, o una propiedad de Building/Unit que puede ser
+      detectada por el <code>sensor</code>. Comienza con <code>@</code>.
+      <br><br>
+      Ejemplos: <code>@scrap</code>, <code>@slag</code>, <code>@totalAmmo</code>.
+      <br><br>
+      <i>Se muestra una lista completa debajo del botón de lápiz en el bloque de instrucciones "Sensor".</i>
+      <br><br>
+      <img src='../../../content/images/logica-glosario-senseable-sensor.png'>
+    </span>
+    <br><br>
+    <h5>Target</h5>
+    <span>
+      Un parametro por el que filtrar una unidad o bloquear un objetivo.
+      Se utiliza principalmente en <code>radar</code>, <code>unit radar</code> y <code>unit locate</code>.
+      <code>radar</code> y <code>unit radar</code> tienen los mismos Targets,
+      pero <code>unit locate</code> es diferente, ya que busca Buildings.
+      <br><br>
+      <i>
+        Se muestra una lista completa presionando los parámetros después de "target"
+        en <code>radar</code> y <code>unit radar</code>, o "find", y "type" en <code>unit radar</code>.
+      </i>
+      <br><br>
+      <img src='../../../content/images/logica-glosario-target-radar.png'>
+      <br><br>
+      <h5>Op</h5>
+      <span>
+        Una operación matemática. Esto es diferente de la instrucción <code>op</code>.
+        <i>Se muestra una lista completa debajo del botón "+" en el bloque de instrucciones "Operation".</i>
+        <br><br>
+        Para las operaciones más complejas, puede buscar en Google:
+        "&ltnombre de la operación&gt Java math".
+      </span>
+      <br><br>
+      <h5>Comp</h5>
+      <span>
+        Una comparación. primordialmente usada en la instrucción <code>jump</code>
+        cuando comparamos 2 valores. <code>always</code> siempre retornará true
+        no importa que, por lo cual siempre causará un salto.
+        <br><br>
+        <i>Se muestra una lista completa debajo del botón de comparación en el bloque de instrucciones "Jump".</i>
+        <br><br>
+        <img src='../../../content/images/logica-glosario-comp-jump.png'>
+      </span>
+    </span>
+  </div>
+</html>
+<script>var subDirs = 3;</script>
+<script src="../../../preload.js"></script>
+<script src="../../../afterload.js"></script>
