@@ -269,7 +269,7 @@
 }
 #sidemenu ul li *{float:left;}
 #sidemenu ul li a{
-  color:#fff;
+  color:var(--font-color);
   list-style: none;
   list-style-type: none;
   text-decoration: none;
