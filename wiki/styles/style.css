@@ -4,10 +4,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback');
 /*audiowideregular*/
 :root{
-  --main-light-light: var(--purple-light-light);
-  --main-light: var(--purple-light);
-  --main:var(--purple);
-  --main-hover:var(--purple-hover);
+  --main-light-light: var(--orange-light-light);
+  --main-light: var(--orange-light);
+  --main:var(--orange);
+  --main-hover:var(--orange-hover);
   --background-light-light:var(--dark-light-light);
   --background-light:var(--dark-light);
   --background:var(--dark);
