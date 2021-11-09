@@ -69,6 +69,7 @@ const content = document.getElementById('content');
     <ul id='sidemenu-category-objetos-ul'>
       <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/cobre/'><img src='${dirString}content/images/objetos/cobre.png'>Cobre</a></li>
       <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/plomo/'><img src='${dirString}content/images/objetos/plomo.png'>Plomo</a></li>
+      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/torio/'><img src='${dirString}content/images/objetos/torio.png'>Torio</a></li>
     </ul>
     <span id='sidemenu-category-logica'>Logica<span id='sidemenu-category-logica-icon' class='fas fa-angle-right'></span></span><br>
     <ul id='sidemenu-category-logica-ul'>
