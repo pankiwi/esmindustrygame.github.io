@@ -1,0 +1,41 @@
+<html lang='es' prefix='og:'>
+  <script src="https://kit.fontawesome.com/f1c716e207.js" crossorigin="anonymous"></script>
+  <meta charset='UTF-8'>
+  <meta name='theme-color' content='#3d3d44'>
+  <meta property='og:title' content='Mindustry Wiki Español - Visualizador HTML'/>
+  <meta property='og:url' content='https://esmindustrygame.github.io/wiki/editor/'/>
+  <meta property='og:description' content='Prueba tu HTML aquí'/>
+  <meta property='og:image' content='https://esmindustrygame.github.io/wiki/content/images/blackContainer.png'/>
+  <div id='main'></div>
+  <div id='content'>
+    <textarea id='input' type='text' placeholder='Ingresa tu HTML aquí'></textarea>
+    <br><br>
+    <div id='htmlPlasmed'></div>
+  </div>
+</html>
+<style>
+  #input{
+    line-height: 1.1em;
+    resize: none;
+    width: 100%;
+    min-height: 500px;
+  }
+  #htmlPlasmed{
+    padding: 1em;
+    border: 1px solid var(--background-light);
+    width: 100%;
+    min-height: 500px;
+  }
+</style>
+<script>var subDirs = 1;</script>
+<script src="../preload.js"></script>
+<script>
+  (() => {
+    const input = document.getElementById('input');
+    const output = document.getElementById('htmlPlasmed');
+    input.addEventListener('input', () => {
+      output.innerHTML = input.value;
+    })
+  })()
+</script>
+<script src="../afterload.js"></script>

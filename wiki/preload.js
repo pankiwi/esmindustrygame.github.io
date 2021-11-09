@@ -41,6 +41,7 @@ const content = document.getElementById('content');
   <meta charset='UTF-8'>
   <title>Mindustry Wiki Español</title>
   <link rel='stylesheet' href='${dirString}styles/style.css'>
+  <link rel='stylesheet' href='${dirString}styles/content.css'>
   <link rel='stylesheet' href='${dirString}styles/highlight.css'>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
