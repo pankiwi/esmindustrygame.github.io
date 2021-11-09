@@ -33,8 +33,14 @@
   (() => {
     const input = document.getElementById('input');
     const output = document.getElementById('htmlPlasmed');
+    const htmlText = localStorage.getItem('htmlText');
+    if(htmlText != ''){
+      input.value = htmlText;
+      output.innerHTML = htmlText;
+    }
     input.addEventListener('input', () => {
       output.innerHTML = input.value;
+      localStorage.setItem('htmlText', input.value);
     })
   })()
 </script>
