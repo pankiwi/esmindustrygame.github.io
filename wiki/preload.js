@@ -50,14 +50,14 @@ const content = document.getElementById('content');
 <div id='header'>
   <header>
     <ul id='header-ul-left'>
-      <li class='header-element' ><a id='header-favicon'title='Mindustry Wiki Español' href=''><img src='${dirString}content/images/favicon.png' width='36' height='36' id='header-favicon'></a></li>
+      <li class='header-element' ><a id='header-favicon'title='Mindustry Wiki Español' href=''><img src='https://esmindustrygame.github.io/wiki/content/images/favicon.png' width='36' height='36' id='header-favicon'></a></li>
       <li class='header-element' ><a id='header-title' title='Página Principal' href=''>Mindustry Wiki Español</a></li>
     </ul>
     <ul id='header-ul-right'>
       <li class='header-element' ><a class='header-button' title='Guias para usuarios nuevos en algun tópico del juego' href='' target='_blank'>Guias</a></li>
       <li class='header-element' ><a class='header-button' title='Se parte de nuestra comunidad de Discord' href='${discordInvite}' target='_blank'>Discord</a></li>
       <li class='header-element' ><div id='header-search'><input id='header-search-input' type='text' placeholder='Buscar'></div></li>
-      <li class='header-element' ><img id='config-icon'src='${dirString}content/images/config.png'></li>
+      <li class='header-element' ><img id='config-icon'src='https://esmindustrygame.github.io/wiki/content/images/config.png'></li>
     </ul>
   </header>
 </div>
@@ -67,9 +67,10 @@ const content = document.getElementById('content');
   <div id='sidemenu'>
     <span id='sidemenu-category-objetos'>Objetos<span id='sidemenu-category-objetos-icon'class='fas fa-angle-right'></span></span><br>
     <ul id='sidemenu-category-objetos-ul'>
-      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/cobre/'><img src='${dirString}content/images/objetos/cobre.png'>Cobre</a></li>
-      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/plomo/'><img src='${dirString}content/images/objetos/plomo.png'>Plomo</a></li>
-      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/torio/'><img src='${dirString}content/images/objetos/torio.png'>Torio</a></li>
+      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/cobre/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/cobre.png'>Cobre</a></li>
+      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/plomo/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/plomo.png'>Plomo</a></li>
+      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/carbon/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/carbon.png'>Carbón</a></li>
+      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/torio/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/torio.png'>Torio</a></li>
     </ul>
     <span id='sidemenu-category-logica'>Logica<span id='sidemenu-category-logica-icon' class='fas fa-angle-right'></span></span><br>
     <ul id='sidemenu-category-logica-ul'>
