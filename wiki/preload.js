@@ -81,7 +81,7 @@ const content = document.getElementById('content');
       <!--
       <a href='https://esminudstrygame.github.io/wiki/pages/logica/escribirLeer/'><img src='https://esmindustrygame.github.io/wiki/content/images/logica/color1.png'>Escribir y leer datos</a>
       -->
-      <a href='https://esmindustrygame.github.io/wiki/pages/logica/imprimirMensaje/'>Imprimir mensaje.</a>
+      <a href='https://esmindustrygame.github.io/wiki/pages/logica/imprimirMensaje/'>Imprimir mensaje</a>
       </details>
     
     <details>
