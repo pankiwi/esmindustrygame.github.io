@@ -78,7 +78,10 @@ const content = document.getElementById('content');
       <summary>Lógica</summary>
       <a href='https://esmindustrygame.github.io/wiki/pages/logica/glosario/'>Glosario</a>
       <a href='https://esmindustrygame.github.io/wiki/pages/logica/introduccion/'>Introducción</a>
+      <!--
       <a href='https://esminudstrygame.github.io/wiki/pages/logica/escribirLeer/'><img src='https://esmindustrygame.github.io/wiki/content/images/logica/color1.png'>Escribir y leer datos</a>
+      -->
+      <a href='https://esmindustrygame.github.io/wiki/pages/logica/imprimirMensaje/'>Imprimir mensaje.</>
       </details>
     
     <details>
