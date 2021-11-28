@@ -1,0 +1,51 @@
+<html lang='es' prefix='og:'>
+  <script src="https://kit.fontawesome.com/f1c716e207.js" crossorigin="anonymous"></script>
+  <meta charset='UTF-8'>
+  <meta name='theme-color' content='#A08A8A'>
+  <meta property='og:title' content='Lógica - Read'/>
+  <meta property='og:url' content='https://esmindustrygame.github.io/wiki/pages/logica/read/'/>
+  <meta property='og:description' content='La enciclopedia en español dedicada a recopilar información sobre Mindustry, el videojuego de estrategia, manejo de recursos, tower defense, y sandbox, creado por Anuken.'/>
+  <div id='main'></div>
+  <div id='content'>
+    <h1>Introducción</h1>
+    Imprimir mensajes en Mindustry tiene varios propositos utiles,
+    desde mostrar texto con el fin de comunicar algo,
+    hasta para probar nuestro código mostrando información que nos gustaría saber.
+    <br><br>
+    Las instrucciones necesarias para imprimir un Mensaje en un
+    <a href='https://esmindustrygame.github.io/wiki/pages/bloques/mensaje/'>Bloque de mensaje</a>
+    son <a href='https://esmindustrygame.github.io/wiki/pages/logica/print'>Print</a> y
+    <a href='https://esmindustrygame.github.io/wiki/pages/logica/printFlush'>PrintFlush</a>.
+    <br><br>
+
+    <h2>Conectando el bloque al procesador</h2>
+    Para poder realizar esta acción primero que todo necesitaremos tener conectado un
+    <a href='https://esmindustrygame.github.io/wiki/pages/bloques/mensaje/'>bloque de mensaje</a>
+    al bloque de procesador que utilizaremos, para hacer esto debes seleccionar el procesador,
+    al hacerlo podrás notar que el rango del procesador se hace visible, clickea en los bloques dentro de ese rango y se conectarán
+    al procesador automáticamente, además, se le asignará un nombre al bloque automaticamente.
+    <br><br>
+    <img src='https://esmindustrygame.github.io/wiki/content/images/logica/imprimirMensaje/rango.png' style='max-width: 400px;max-height: 400px;'>
+    <br><br>
+    En este caso podremos observar que al conectar el
+    <a href='https://esmindustrygame.github.io/wiki/pages/bloques/mensaje/'>bloque de mensaje</a>
+    al procesador se le asignará el nombre <code>message1</code>, con ese mismo nombre haremos
+    referencia al bloque de mensaje en un futuro dentro del bloque de procesador.
+    <br><br>
+    <h2>Establecer el texto a imprimir</h2>
+    El siguiente paso después de conectar el <a href='https://esmindustrygame.github.io/wiki/pages/bloques/mensaje/'>bloque de mensaje</a>
+    es establecer lo que queremos imprimir, para ello deberemos agregar una nueva instrucción <a href='https://esmindustrygame.github.io/wiki/pages/logica/print'>Print</a>
+    y dentro de ella agregar dentro de comillas dobles el texto que nos gustaría imprimir, en este caso a forma de ejemplo he agregado "Hello Mindustry" dentro de la instrucción.
+    <br><br>
+    <img src='https://esmindustrygame.github.io/wiki/content/images/logica/imprimirMensaje/helloMindustry.png'>
+    <br><br>
+    <h2>Imprimir el texto</h2>
+    Una vez establecido el texto a imprimir debemos decirle al procesador que escriba esa información dentro del <code>message1</code>, para esto llamaremos
+    a la instrucción <a href='https://esmindustrygame.github.io/wiki/pages/logica/printFlush'>PrintFlush</a>. y le daremos como argumento <code>message1</code>.
+    <br><br>
+    <img src='https://esmindustrygame.github.io/wiki/content/images/logica/imprimirMensaje/toMessage1.png'>
+  </div>
+</html>
+<script>var subDirs = 3;</script>
+<script src="../../../preload.js"></script>
+<script src="../../../afterload.js"></script>

@@ -54,7 +54,7 @@ const content = document.getElementById('content');
       <li class='header-element' ><a id='header-title' title='Página Principal' href=''>Mindustry Wiki Español</a></li>
     </ul>
     <ul id='header-ul-right'>
-      <li class='header-element' ><a class='header-button' title='Guias para usuarios nuevos en algun tópico del juego' href='' target='_blank'>Guias</a></li>
+      <li class='header-element' ><a class='header-button' title='Guias para usuarios nuevos en algun tópico del juego' href='' target='_blank'>Guías</a></li>
       <li class='header-element' ><a class='header-button' title='Se parte de nuestra comunidad de Discord' href='${discordInvite}' target='_blank'>Discord</a></li>
       <li class='header-element' ><div id='header-search'><input id='header-search-input' type='text' placeholder='Buscar'></div></li>
       <li class='header-element' ><img id='config-icon'src='https://esmindustrygame.github.io/wiki/content/images/config.png'></li>
@@ -65,20 +65,29 @@ const content = document.getElementById('content');
 
 <div id='container'>
   <div id='sidemenu'>
-    <span id='sidemenu-category-objetos'>Objetos<span id='sidemenu-category-objetos-icon'class='fas fa-angle-right'></span></span><br>
-    <ul id='sidemenu-category-objetos-ul'>
-      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/cobre/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/cobre.png'>Cobre</a></li>
-      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/plomo/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/plomo.png'>Plomo</a></li>
-      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/carbon/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/carbon.png'>Carbón</a></li>
-      <li><a href='https://esmindustrygame.github.io/wiki/pages/objetos/torio/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/torio.png'>Torio</a></li>
-    </ul>
-    <span id='sidemenu-category-logica'>Logica<span id='sidemenu-category-logica-icon' class='fas fa-angle-right'></span></span><br>
-    <ul id='sidemenu-category-logica-ul'>
-      <li><a href='https://esmindustrygame.github.io/wiki/pages/logica/introduccion/'>Introducción</a></li>
-      <li><a href='https://esmindustrygame.github.io/wiki/pages/logica/glosario/'>Glosario</a></li>
-    </ul>
+    <details>
+      <summary>Objetos</summary>
+      <a href='https://esmindustrygame.github.io/wiki/pages/objetos/cobre/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/cobre.png'>Cobre</a>
+      <a href='https://esmindustrygame.github.io/wiki/pages/objetos/plomo/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/plomo.png'>Plomo</a>
+      <a href='https://esmindustrygame.github.io/wiki/pages/objetos/carbon/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/carbon.png'>Carbón</a>
+      <a href='https://esmindustrygame.github.io/wiki/pages/objetos/arena/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/arena.png'>Arena</a>
+      <a href='https://esmindustrygame.github.io/wiki/pages/objetos/torio/'><img src='https://esmindustrygame.github.io/wiki/content/images/objetos/torio.png'>Torio</a>
+    </details>
+
+    <details>
+      <summary>Lógica</summary>
+      <a href='https://esmindustrygame.github.io/wiki/pages/logica/glosario/'>Glosario</a>
+      <a href='https://esmindustrygame.github.io/wiki/pages/logica/introduccion/'>Introducción</a>
+      <a href='https://esminudstrygame.github.io/wiki/pages/logica/escribirLeer/'><img src='https://esmindustrygame.github.io/wiki/content/images/logica/color1.png'>Escribir y leer datos</a>
+      </details>
+    
+    <details>
+      <summary>Bloques</summary>
+      <a href='https://esmindustrygame.github.io/wiki/pages/bloques/unidadDeMemoria/'><img https://esmindustrygame.github.io/wiki/content/images/bloques/logica/unidadDeMemoria.png>Unidad de memoria</a> 
+      </details>
   </div>
   <div id='content'>
+    <details id='index'><summary id='index-summary'>Índice</summary></details>
     ${content.innerHTML}
   </div>
 </div>
@@ -153,33 +162,34 @@ for(button of (document.getElementsByClassName('color-button'))){
   })  
 }
 
-//sidemenu
-//objetos
-let objetosCategory = document.getElementById('sidemenu-category-objetos');
-let objetosCategoryIcon = document.getElementById('sidemenu-category-objetos-icon')
-let objetosCategoryUl = document.getElementById('sidemenu-category-objetos-ul');
-objetosCategory.addEventListener('click', () => {
-  if(objetosCategoryUl.style.display == 'block'){
-    objetosCategoryUl.style.setProperty('display','none');
-    objetosCategoryIcon.setAttribute('class','fas fa-angle-right');
-  }
-  else{objetosCategoryUl.style.setProperty('display','block')
-  objetosCategoryIcon.setAttribute('class','fas fa-angle-right sidemenu-icon-rotated');
-  }
-})
+//Index
+[
+  ...document.getElementsByTagName('h1'),
+  ...document.getElementsByTagName('h2'),
+  ...document.getElementsByTagName('h3'),
+  ...document.getElementsByTagName('h4'),
+  ...document.getElementsByTagName('h5'),
+  ...document.getElementsByTagName('h6'),
+].forEach(h => {h.classList.add('hIndex');});
+let hTags = document.getElementsByClassName('hIndex');
+let index = document.getElementById('index');
+for(let h of hTags){
+  let coord = h.getBoundingClientRect();
+  index.innerHTML = index.innerHTML + `<div onclick='window.scroll({left:${coord.left},top:${coord.top},behavior:"smooth"});'>${h.textContent}</div>`;
+}
 
-//logica
-let logicaCategory = document.getElementById('sidemenu-category-logica');
-let logicaCategoryIcon = document.getElementById('sidemenu-category-logica-icon')
-let logicaCategoryUl = document.getElementById('sidemenu-category-logica-ul');
-logicaCategory.addEventListener('click', () => {
-  if(logicaCategoryUl.style.display == 'block'){
-    logicaCategoryUl.style.setProperty('display','none');
-    logicaCategoryIcon.setAttribute('class','fas fa-angle-right');
+//Add a > icon to all summary tags
+let detailsTags = document.getElementsByTagName('details');
+//console.log(detailsTags)
+for(let d of detailsTags){
+  if(d.firstElementChild.tagName == 'SUMMARY'){
+    d.firstElementChild.innerHTML = d.firstElementChild.innerHTML + `<div style='float:right;' class='fas fa-angle-right sidemenu-icon'></div>`;
+    d.addEventListener('click', () => {
+      if(d.firstElementChild.lastElementChild.classList.contains('icon-rotated')){
+        d.firstElementChild.lastElementChild.classList.remove('icon-rotated');
+      }else{d.firstElementChild.lastElementChild.classList.add('icon-rotated');}
+    }); 
   }
-  else{logicaCategoryUl.style.setProperty('display','block')
-  logicaCategoryIcon.setAttribute('class','fas fa-angle-right sidemenu-icon-rotated');
-  }
-})
+}
 
 })();
