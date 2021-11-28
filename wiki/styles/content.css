@@ -118,7 +118,8 @@ textarea{
 }
 details{
   padding: 0.5em 1em;
-  max-width: 250px;
+  min-width: 300px;
+  max-width: max-content;
   border-color: var(--background-light);
   border-radius: 3px;
   border-width: 2px;
